@@ -13,6 +13,10 @@ bearer_scheme = HTTPBearer()
 
 
 def hash_password(password: str) -> str:
+        # ✅ Truncar a 72 bytes (límite de bcrypt)
+    # Usamos encode/decode para contar bytes, no caracteres
+    if len(password.encode('utf-8')) > 72:
+        password = password.encode('utf-8')[:72].decode('utf-8', errors='ignore')
     return pwd_context.hash(password)
 
 
