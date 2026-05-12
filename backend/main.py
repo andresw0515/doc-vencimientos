@@ -30,7 +30,11 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost:5173",  # Desarrollo local
+        "https://doc-vencimientos.vercel.app",  # Tu dominio en Vercel
+        "https://doc-vencimientos-cyzuso8r6-pipewong92-3358s-projects.vercel.app",  # Preview de Vercel
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
