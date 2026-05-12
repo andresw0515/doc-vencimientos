@@ -5,6 +5,7 @@ from core.database import create_tables
 from routers import documentos, usuarios, auth
 from services.scheduler import start_scheduler
 import logging
+import os
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
