@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     DATABASE_URL: str
 
     # JWT
-    SECRET_KEY: str = "cambia_esto_en_produccion_con_valor_seguro"
+    SECRET_KEY: str = "vWy6Qa_b9Qu7Pg1i5XQPL_SYUnI33wiAxIbAucH-JE0"
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 1440  # 24 horas
 
